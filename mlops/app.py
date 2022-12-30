@@ -5,10 +5,11 @@ Executable to run the app.
 
 import pandas as pd
 import uvicorn
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 
 from mlops.logging import logging
 from mlops.modeling import util
+from mlops.validate.validate import CaliforniaHousing
 
 logging.init()
 logger = logging.get(__name__)
@@ -23,11 +24,10 @@ async def root():
 
 
 @app.post("/predict")
-async def predict(request: Request):
+async def predict(california_housing: CaliforniaHousing):
     logger.info("Called predict.")
     model = util.load_model()
-    data = await request.json()
-    data = pd.DataFrame([data])
+    data = pd.DataFrame([california_housing.dict()])
     return model.predict(data)[0]
 
 
