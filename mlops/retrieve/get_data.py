@@ -19,11 +19,11 @@ FILE_NAME = "california_housing.parquet"
 
 
 def get_california_housing_data():
-    data = get_data()
-    save_data(data)
+    data = _get_data()
+    _save_data(data)
 
 
-def get_data() -> pd.DataFrame:
+def _get_data() -> pd.DataFrame:
     """Get data and transform into pandas dataframe."""
     raw_data = fetch_california_housing()
     formatted_data = pd.DataFrame(raw_data.data, columns=raw_data.feature_names)
@@ -32,7 +32,7 @@ def get_data() -> pd.DataFrame:
     return formatted_data
 
 
-def save_data(data: pd.DataFrame):
+def _save_data(data: pd.DataFrame):
     data.to_parquet(constants.BRONZE_LAYER / FILE_NAME)
 
 
