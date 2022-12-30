@@ -168,3 +168,5 @@ cython_debug/
 .python-version
 
 data/
+
+mlops/models
