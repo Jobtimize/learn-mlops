@@ -18,12 +18,13 @@ COLUMN_NAMES_MAPPING = {
 FILE_NAME = "california_housing.parquet"
 
 
-def main():
+def get_california_housing_data():
     data = get_data()
-    dump_data(data)
+    save_data(data)
 
 
 def get_data() -> pd.DataFrame:
+    """Get data and transform into pandas dataframe."""
     raw_data = fetch_california_housing()
     formatted_data = pd.DataFrame(raw_data.data, columns=raw_data.feature_names)
     formatted_data[raw_data.target_names[0]] = raw_data.target
@@ -31,9 +32,9 @@ def get_data() -> pd.DataFrame:
     return formatted_data
 
 
-def dump_data(data: pd.DataFrame):
+def save_data(data: pd.DataFrame):
     data.to_parquet(constants.BRONZE_LAYER / FILE_NAME)
 
 
 if __name__ == "__main__":
-    main()
+    get_california_housing_data()
