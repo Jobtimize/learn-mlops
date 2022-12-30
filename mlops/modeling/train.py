@@ -20,4 +20,4 @@ def _split_features_and_target(data: pd.DataFrame) -> tuple[pd.DataFrame, pd.Ser
 
 
 def _save_model(model: RandomForestRegressor):
-    joblib.dump(model, constants.MODEL_NAME)
+    joblib.dump(model, constants.MODEL_DIR / constants.MODEL_NAME)

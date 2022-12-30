@@ -35,3 +35,7 @@ def _get_data() -> pd.DataFrame:
 
 def _save_data(data: pd.DataFrame):
     data.to_parquet(constants.BRONZE_LAYER / FILE_NAME)
+
+
+if __name__ == "__main__":
+    get_california_housing_data()
