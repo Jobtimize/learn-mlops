@@ -1,2 +1,2 @@
-# run the app in a reloadable fashion
-uvicorn mlops.app:app --reload
+# run the app
+uvicorn mlops.app:app

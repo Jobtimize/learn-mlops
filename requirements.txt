@@ -5,8 +5,6 @@ fastapi==0.88.0
 h11==0.14.0
 idna==3.4
 joblib==1.2.0
-# Editable Git install with no remote (mlops==0.1.0)
--e /home/job/personal/mlops
 mypy-extensions==0.4.3
 numpy==1.24.1
 pandas==1.5.2
