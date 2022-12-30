@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt \
     && sh scripts/setup_dirs.sh \
     && python scripts/train_model.py
 
-CMD [ "sh", "scripts/run_app.sh" ]
+CMD uvicorn mlops.app:app
