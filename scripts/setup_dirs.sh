@@ -1,2 +1,2 @@
 mkdir -p data/bronze
-mkdir -p mlops/models
+mkdir -p models
