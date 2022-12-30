@@ -1,10 +1,10 @@
 # MLOps
 
-A simple MLOps project using FastAPI and Pydantic.
+A simple MLOps project using sklearn, FastAPI and Pydantic.
 
 ## Goal
 
-Create a minimal MLOps application that is able to:
+In a single afternoon, create a minimal MLOps application that is able to:
 - Retrieve some toy data (California Housing)
 - Train and store a simple ML model
 - Serve the model using FastAPI
