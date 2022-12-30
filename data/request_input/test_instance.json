@@ -1,1 +1,10 @@
-{}
+{
+    "med_inc": 1,
+    "house_age": 1,
+    "avg_rooms": 1,
+    "avg_bedrooms": 1,
+    "population": 1,
+    "avg_occupation": 1,
+    "lat": 1,
+    "lon": 1
+}
