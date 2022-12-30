@@ -18,9 +18,10 @@ COLUMN_NAMES_MAPPING = {
 FILE_NAME = "california_housing.parquet"
 
 
-def get_california_housing_data():
+def get_california_housing_data() -> pd.DataFrame:
     data = _get_data()
     _save_data(data)
+    return data
 
 
 def _get_data() -> pd.DataFrame:
