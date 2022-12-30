@@ -8,6 +8,7 @@ logger = logging.get(__name__)
 
 
 def train_model(data: pd.DataFrame):
+    """Init a model, split features and target, fit the model, save the model."""
     logger.info("Init model.")
     model = RandomForestRegressor()
     X, y = _split_features_and_target(data)
@@ -17,7 +18,7 @@ def train_model(data: pd.DataFrame):
 
 
 def _split_features_and_target(data: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
-    """Assumes target is last feature"""
+    """Assumes target is the last column."""
     logger.info("Split features and target.")
     y = data.iloc[:, -1]
     X = data.iloc[:, : data.shape[1] - 1]

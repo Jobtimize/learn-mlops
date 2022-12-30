@@ -1,3 +1,8 @@
+"""
+Constant values used throughout the project.
+
+"""
+
 from pathlib import Path
 
 MODEL_DIR = Path("models")

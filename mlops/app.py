@@ -1,3 +1,8 @@
+"""
+Executable to run the app.
+
+"""
+
 import pandas as pd
 import uvicorn
 from fastapi import FastAPI, Request

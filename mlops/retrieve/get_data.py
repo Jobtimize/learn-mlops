@@ -19,6 +19,7 @@ FILE_NAME = "california_housing.parquet"
 
 
 def get_california_housing_data() -> pd.DataFrame:
+    """Get and save sample data."""
     data = _get_data()
     _save_data(data)
     return data

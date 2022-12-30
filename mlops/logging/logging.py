@@ -1,3 +1,26 @@
+"""
+A nicely formatted logger.
+
+Usage:
+    In the executable script add:
+
+    ```
+    from mlops.logging import logging
+
+    logging.init()
+    logger = logging.get()
+    ```
+
+    In all the subscripts add:
+
+    ```
+    from mlops.logging import logging
+
+    logger = logging.get()
+    ```
+
+"""
+
 import logging
 import sys
 
