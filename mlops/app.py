@@ -12,8 +12,8 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.post("/predict_request")
-async def predict_request(request: Request):
+@app.post("/predict")
+async def predict(request: Request):
     model = util.load_model()
     data = await request.json()
     data = pd.DataFrame([data])
