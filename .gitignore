@@ -167,6 +167,6 @@ cython_debug/
 # pyenv
 .python-version
 
-data/
+data/bronze/
 
 mlops/models
