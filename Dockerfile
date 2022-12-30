@@ -11,3 +11,5 @@ RUN pip install -r requirements.txt \
     && pip install . \
     && sh scripts/setup_dirs.sh \
     && python scripts/train_model.py
+
+CMD [ "sh", "scripts/run_app.sh" ]
